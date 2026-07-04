@@ -10,11 +10,12 @@ using namespace std;
     }
     queue::~queue(){
         node* tempNode;
-        while(firstNode != lastNode){
+        while(firstNode != NULL){
             tempNode = firstNode;
             firstNode = firstNode->next;
             delete tempNode;
         }
+        lastNode = NULL;
     }
 
     bool queue::isfull(){
